@@ -1,0 +1,468 @@
+header{
+    background-color: #29a16c;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+footer{
+    margin-top: 20px;
+    background-color: #29a16c;
+    height: 20vh;
+}
+
+.calendar-table td {
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px;
+    height: 5px;
+}
+.calendar-table .header {
+    background-color: #f8f9fa;
+    font-weight: bold;
+}
+.calendar-table .today {
+    background-color: #e9ecef;
+    font-weight: bold;
+}
+.calendar-container {
+    margin-top: 76px;
+    margin-left: 70px;
+    width: auto;
+    height: auto;
+    border-style: solid;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    padding: 20px;            
+}
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.contenedorPadre {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 40px;
+}
+
+.custom-card {
+width: 200px;
+height: 200px;
+border: 1px solid #ddd;
+border-radius: 8px;
+overflow: hidden;
+}
+.custom-card img {
+padding-top: 20px;
+display: block;
+margin: 0 auto;
+width: 80px; /* Ajusta el tamaño según sea necesario */
+height: auto;
+}
+.custom-card a {
+display: block;
+height: 100%;
+text-decoration: none;
+color: inherit;
+}
+#prevMonth, #nextMonth {
+background-color: #29a16c; /* Verde */
+color: #ffffff; /* Blanco */
+border: none; /* Sin borde */
+padding: 10px 20px;
+border-radius: 5px;
+font-size: 16px;
+cursor: pointer;
+}
+
+#prevMonth:hover,
+#nextMonth:hover {
+background-color: #218838; /* Verde más oscuro al pasar el cursor */
+}
+
+#prevMonthh, #nextMonthh {
+    background-color: #29a16c; /* Verde */
+    color: #ffffff; /* Blanco */
+    border: none; /* Sin borde */
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    }
+    
+    #prevMonthh:hover,
+    #nextMonthh:hover {
+    background-color: #218838; /* Verde más oscuro al pasar el cursor */
+    }
+
+.buttonIncri{
+    color: rgb(0, 0, 0);
+    background-color: #fefefe;
+    box-shadow: 1px 3px 6px 1px rgba(179, 175, 175, 0.717);
+}
+.buttonIncri:hover{
+    color: rgb(255, 255, 255);
+    background-color: #218838;
+}
+.buttonIncri1:hover{
+     color: rgb(255, 255, 255);
+    background-color: #218838;
+}
+
+.selected {
+    background-color: #218838;
+    color: #fff;
+}
+
+.info{
+    margin-bottom: 30px;
+}
+.lista{
+    padding: 20px;
+}
+.horario{
+    padding: 13px;
+    box-shadow: 0px 2px 3px 0px rgba(75, 75, 75, 0.514);
+}
+.next{
+    color: white;
+    background-color: #218838;
+}
+.next:hover{
+    color: white;
+    background-color: #3c914f;
+}
+.table-color{
+    background-color: #3c914f !important;
+}
+
+.horario > .buttonIncri{
+    margin-bottom: 10px;
+}
+footer, header{
+    background-color: #29a16c;
+    
+}
+
+.calendar-table td {
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px;
+    height: 5px;
+}
+.calendar-table .header {
+    background-color: #f8f9fa;
+    font-weight: bold;
+}
+.calendar-table .today {
+    background-color: #e9ecef;
+    font-weight: bold;
+}
+.calendar-container {
+    margin-top: 76px;
+    margin-left: 70px;
+    width: auto;
+    height: auto;
+    border-style: solid;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    padding: 20px;            
+}
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.contenedorPadre {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 40px;
+}
+
+.custom-card {
+width: 200px;
+height: 188px;
+border: 1px solid #ddd;
+border-radius: 8px;
+overflow: hidden;
+}
+.custom-card img {
+padding-top: 20px;
+display: block;
+margin: 0 auto;
+width: 80px; 
+height: auto;
+}
+.custom-card a {
+display: block;
+height: 100%;
+text-decoration: none;
+color: inherit;
+}
+#prevMonth, #nextMonth {
+background-color: #29a16c; 
+color: #ffffff; 
+border: none; 
+padding: 10px 20px;
+border-radius: 5px;
+font-size: 16px;
+cursor: pointer;
+}
+
+#prevMonth:hover,
+#nextMonth:hover {
+background-color: #218838; 
+}
+.navbar-custom {
+padding: 15px;
+background-color: #e8e7e7;
+}
+
+
+.nav-button {
+color: #ffffff;
+background-color: #3c914f;
+border-radius: 10px;
+padding: 5px 15px;
+margin: 0 5px;
+text-decoration: none;
+border: none;
+}
+
+.nav-button:hover {
+background-color: #4bb262;
+color: #ffffff;
+}
+
+.navbar-nav .dropdown-toggle.show {
+color: #ffffff !important; 
+}
+
+.dropdown-menu-custom {
+background-color: #343a40;
+border-radius: 10px;
+}
+
+
+.dropdown-item-custom {
+color: #ffffff;
+}
+
+.dropdown-item-custom:hover {
+background-color: #444d56;
+color: #ffffff;
+}
+
+
+.navbar-nav {
+align-items: center;
+}
+.dropdown-menu-custom {
+max-height: 300px; 
+overflow-y: auto; 
+background-color: #343a40;
+border-radius: 10px;
+}
+.modal-dialog {
+max-width: 70%; 
+}
+
+.modal-body img {
+width: 100%; 
+height: auto;
+}
+.today {
+    background-color: #ffeb3b; /* Color para el día actual */
+}
+.holiday {
+    background-color: #f28b82; /* Color para los días feriados */
+}
+
+.gap-4{
+    gap: 4.5rem !important;
+}
+.calend{
+    display: none;
+}
+
+.modal-dialog {
+    max-width: 90%; 
+    margin: 30px auto; 
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+.modal-backdrop {
+    width: 100%;
+    height: 200vh;
+    background-color: rgba(0, 0, 0, 0.75); 
+}
+
+/* Centrar el calendario dentro del modal */
+.calendario {
+    width: 100%;
+    max-width: 100%; /* Asegura que el calendario ocupe todo el espacio disponible */
+    overflow-x: auto; /* Habilitar desplazamiento horizontal si el calendario es muy grande */
+    margin: 0 auto;  /* Centrar el calendario */
+    display: block;
+}
+
+/* Estilo para la tabla del calendario */
+.table-calendar {
+    width: 100%;
+    font-size: 12px; /* Reducir el tamaño de la fuente */
+}
+
+.table-calendar,
+.table-calendar td {
+    padding: 8px;  /* Reducir el padding */
+    text-align: center;  /* Centrar el texto */
+}
+
+@media (max-width: 600px) {
+    .ms-5{
+        margin-left: 0px !important;
+    }
+    .calendar-container {
+        display: block;
+    }
+    .card-title{
+        font-size: 17px;
+    }
+    .calend{
+        display: block;
+    }
+    .calendar-table td {
+        font-size: 10px; /* Reducir el tamaño de la fuente en pantallas pequeñas */
+        padding: 5px;    /* Reducir el padding */
+    }
+
+    .calendar-header h4 {
+        font-size: 14px; /* Ajustar el tamaño de la fuente de la cabecera */
+    }
+    
+
+    /* Mostrar el botón para ver el calendario */
+    #toggleCalendar {
+        display: block;
+        margin: 20px auto;
+        text-align: center;
+    }
+    .calendar-section {
+        display: none;
+    }
+
+    .tramites-section{
+        width: 100%;
+    }
+    .contenedorPadre{
+        padding: 40px;
+        display: flex;
+    }
+
+    .tramites-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+    .text{
+        padding: 0 !important;
+        margin-bottom: 10px !important;
+    }
+    
+    .custom-card {
+        flex: 1 1 200px; /* Ancho mínimo de 200px, se adapta automáticamente */
+        max-width: 300px;
+    }
+    .dropdown-menu {
+        width: 100%;
+        left: 0 !important; /* Asegura que se alinee correctamente */
+    }
+
+    /* Ajustamos el tamaño de los ítems del menú */
+    .dropdown-item {
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .dropdown-toggle::after {
+        display: none; /* Opcional: elimina el ícono de la flecha */
+    }
+.content{
+    display: flex;
+    justify-content: flex-start;
+    padding: 0 !important;
+}
+    .items{
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+       
+    }
+
+    
+.nav-button{
+    font-size: 0.8em;
+}
+.tramites-container {
+    gap: 100px;
+}
+
+.custom-card {
+    width: 100px;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.gap-4 {
+   gap: 2.5rem !important;
+}
+
+#tooltip{
+    display: none;
+}
+
+
+
+.mapa{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+    width: 90% !important;
+}
+
+.modal-content{
+    max-width: 99% !important;
+}
+.mapa-img{
+    height: 70vh !important;
+    max-width: 100% !important;
+}
+
+}
+
+.mapa{
+    width: 70%;
+}
+
+
+/* Mostrar el calendario y ocultar trámites en pantallas mayores a 600px */
+@media (min-width: 601px) {
+    .tramites-section {
+        display: block;
+    }
+}

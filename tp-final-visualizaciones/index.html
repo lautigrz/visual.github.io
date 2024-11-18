@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intranet UNLaM</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container-fluid {
+            height: 100vh;
+            display: flex;
+            padding: 0;
+        }
+        .info-section {
+            background-color: #29a16c;
+            color: white;
+            padding: 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            width: 50%;
+        }
+        .info-section h3 {
+            font-weight: bold;
+            font-size: 2em;
+        }
+        .info-section p {
+            font-size: 1.2em;
+            margin-top: 20px;
+        }
+        .login-section {
+            background-image: url('/imagenes/estudiante.jpeg');
+            background-repeat: no-repeat;
+            background-size: 300px;
+            background-position: 400px 230px;
+            background-color: white;
+            padding: 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+        }
+        .form-control {
+            border-radius: 20px;
+            padding: 10px;
+        }
+        .btn-login {
+            background-color: #29a16c;
+            color: white;
+            border-radius: 20px;
+            padding: 10px 0;
+        }
+        .btn-login:hover {
+            background-color: #228a5d;
+            transition: 1s;
+        }
+        .forgot-password {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .forgot-password:hover {
+            text-decoration: underline;
+        }
+        .error-message {
+            color: red;
+            font-size: 0.9em;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container-fluid">
+    <!-- Sección de Información -->
+    <div class="info-section">
+        <h3>Información importante</h3>
+        <p>Este es el Sistema de Autogestión de Alumnos de la UNLaM, también denominado Intraconsulta. Aquí encontrarás las Operaciones de Autogestión que necesitarás para completar las actividades básicas de tu currícula académica.</p>
+    </div>
+
+    <!-- Sección de Login -->
+    <div class="login-section">
+        <img src="https://expoproyecto.unlam.edu.ar/e/images/unlam-dos-lineas.png" alt="UNLaM Logo" class="mb-2" style="width: 200px;">
+        
+        <form id="loginForm" class="w-75 mt-4">
+            <div class="mb-4">
+                <input type="text" id="documento" class="form-control" placeholder="Documento" aria-label="Documento">
+            </div>
+            <div class="mb-4">
+                <input type="password" id="contrasenia" class="form-control" placeholder="Contraseña" aria-label="Contraseña">
+            </div>
+            <button type="submit" class="btn btn-login w-100">Ingresar</button>
+            <div id="error-message" class="error-message"></div>
+        </form>
+        <a href="#" class="forgot-password mt-3">¿Has olvidado tu contraseña?</a>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    // Array de documentos válidos
+    const documentosValidos = ["44671393"];
+    const contraseniaValidos = ["123"]; // Añade más documentos según sea necesario
+
+    // Selecciona el formulario y el mensaje de error
+    const loginForm = document.getElementById('loginForm');
+    const errorMessage = document.getElementById('error-message');
+
+    // Agrega un evento al formulario para la validación
+    loginForm.addEventListener('submit', function(event) {
+        event.preventDefault(); // Evita el envío del formulario por defecto
+
+        // Obtiene el valor del campo "Documento"
+        const documentoIngresado = document.getElementById('documento').value;
+        const contraseniaIngresado = document.getElementById('contrasenia').value;
+
+        // Verifica si el documento ingresado está en el array de documentos válidos
+        if (documentosValidos[0] == documentoIngresado && contraseniaValidos[0]==contraseniaIngresado) {
+            errorMessage.textContent = ''; // Limpia el mensaje de error
+            window.location.href = "../tp-visualizaciones/paginas/home.html"; // Redirige al usuario si el documento es válido
+        } else {
+            // Muestra un mensaje de error si el documento no es válido
+            errorMessage.textContent = 'Documento no válido. Por favor, inténtalo de nuevo.';
+        }
+    });
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <title>Verificación de Materias</title>
+
+    <style>
+        .btn-link {
+            color: #007bff;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .btn-link i {
+            font-size: 18px;
+            color: #d9534f;
+        }
+
+        .table-container {
+            margin-top: 20px;
+        }
+
+        .table th, .table td {
+            text-align: center;
+        }
+
+        .header-logo {
+            width: 290px;
+        }
+
+        .profile-img {
+            width: 50px;
+            height: 50px;
+        }
+
+
+.divider-line {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #d3d3d3;
+    margin: 0.5rem 0;
+}
+
+    </style>
+</head>
+<body>
+    <header class="d-flex align-items-center justify-content-between p-2 border-bottom">
+
+        <div class="d-flex align-items-center ms-3">
+            <img src="https://www.universidades.com.ar/logos/original/logo-universidad-nacional-de-la-matanza.webp" alt="unlam" class="me-3 unlam">
+            <h4 class="title mt-1">IntraConsulta</h4>
+        </div>
+        <div class="d-flex align-items-center me-3 p-1">
+            <div class="text-end me-3 profile">
+                <p class="mb-0 text-white">RUGNA, JONATHAN NAHUEL</p>
+                <a href="../paginas/perfil.html" class="text-decoration-none text-white">Mi Perfil</a>
+                <span class="text-muted">|</span>
+                <a href="#" class="text-decoration-none ms-2 me-2 text-white" id="ayudaLink">Ayuda</a>
+                <span class="text-muted">|</span>
+                <a href="../index.html" class="text-decoration-none ms-2 text-white">Cerrar Sesión</a>
+            </div>
+            <img src="https://i.redd.it/szn7f3ln8jr31.jpg" alt="Perfil" class="rounded-circle naveg" style="width: 53px; height: 53px;">
+        </div>
+
+        <div class="dropdown drop">
+            <a class="nav-link dropdown-toggle text-white me-2 cuenta" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa-solid fa-user-circle me-0" style="font-size: 1rem; "></i>
+                Mi cuenta
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="../paginas/perfil.html">Perfil</a></li>
+                <li><a href="#" class="dropdown-item" id="ayudaLink" data-bs-toggle="modal" data-bs-target="#ayudaModal">Ayuda</a></li>
+                <li><a class="dropdown-item" href="../index.html">Cerrar sesión</a></li>
+            </ul>
+        </div>
+        
+    </header>
+    <nav class="navbar navbar-expand-lg navbar-custom mb-4">
+        <div class="container-fluid">
+            <ul class="navbar-nav ms-5 align-items-center">
+                <!-- Botón para "Volver al Inicio" -->
+                <li class="nav-item">
+                    <a href="home.html" class="nav-button">Volver al Inicio</a>
+                </li>
+    
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Tabla de Materias Inscritas -->
+    <section class="container my-5">
+        <h4 class="text-center mb-4">Verificacion de mesa de Examen</h4>
+       <!-- Mensaje informativo -->
+       <div class="alert alert-info text-center mt-4">
+        Podrás visualizar el contenido de cada mesa de examen en la plataforma <strong>MIeL</strong>. 
+        Si no la visualizas correctamente, comunícate con nosotros a: 
+        <a href="mailto:xxxx@xxx.com">intraconsulta@unlam.edu.ar</a>
+    </div>
+    <div class="row">
+        <!-- Card 1: Base de Datos I -->
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Base de Datos I</h5>
+                    <span class="divider-line"></span>
+                    <p class="card-text mb-1"><strong>Modalidad:</strong> Presencial</p>
+                    <p class="card-text mb-1"><strong>Horario:</strong> Lunes 18:00 - 21:00</p>
+                    <p class="card-text mb-1"><strong>Fecha:</strong> 05/12</p>
+                    <p class="card-text mb-1"><strong>Mesa:</strong> 7531</p>
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2: Inglés Técnico II -->
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Inglés Técnico II</h5>
+                    <span class="divider-line"></span>
+                    <p class="card-text mb-1"><strong>Modalidad:</strong> Virtual</p>
+                    <p class="card-text mb-1"><strong>Horario:</strong> Jueves 19:00 - 21:00</p>
+                    <p class="card-text mb-1"><strong>Fecha:</strong> 05/12</p>
+                    <p class="card-text mb-1"><strong>Mesa:</strong> 2312</p>
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3: Programación Básica II -->
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Programación Básica II</h5>
+                    <span class="divider-line"></span>
+                    <p class="card-text mb-1"><strong>Modalidad:</strong> Presencial</p>
+                    <p class="card-text mb-1"><strong>Horario:</strong> Jueves 17:00 - 20:00</p>
+                    <p class="card-text mb-1"><strong>Fecha:</strong> 05/12</p>
+                    <p class="card-text mb-1"><strong>Mesa:</strong> 2113</p>
+                
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </section>
+    
+
+    <footer class="footer  py-4">
+        <div class="container">
+          <div class="row">
+            <!-- Columna de Información -->
+            <div class="col-md-6 footer-unlam">
+              <h5>Universidad de La Matanza</h5>
+              <p class="mb-3">La Universidad de La Matanza (UNLaM) es una institución educativa de prestigio en la región, comprometida con la excelencia académica y el bienestar de sus estudiantes. En 2024, seguimos trabajando para brindarte las mejores herramientas y recursos para tu educación.</p>
+              <p>¡Gracias por ser parte de nuestra comunidad!</p>
+            </div>
+      
+            <!-- Columna de Contacto y Comentarios -->
+            <div class="col-md-6">
+              <h5>Contáctanos</h5>
+              <p class="mb-3">Si tienes alguna duda, consulta o sugerencia, no dudes en ponerte en contacto con nosotros:</p>
+              <button class="btn btn-primary mb-2" onclick="window.location.href='mailto:contacto@unlam.edu.ar'">Contactanos</button>
+    
+            </div>
+          </div>
+      
+          <!-- Derechos de autor -->
+         
+        </div>
+        <div class="text-center mt-1">
+            <p class="mb-0">© 2024 Universidad de La Matanza. Todos los derechos reservados.</p>
+          </div>
+      </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

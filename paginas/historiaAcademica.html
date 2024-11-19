@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <title>Historia Académica</title>
+    <style>
+        /* Estilo para la barra de navegación */
+.navbar-custom {
+    padding: 15px;
+    background-color: #e8e7e7;
+}
+
+/* Botones de navegación */
+.nav-button {
+    color: #ffffff;
+    background-color: #3c914f;
+    border-radius: 10px;
+    padding: 5px 15px;
+    margin: 0 5px;
+    text-decoration: none;
+}
+
+.nav-button:hover {
+    background-color: #4bb262;
+    color: #ffffff;
+}
+
+
+/* Menú desplegable personalizado */
+/* Estilos para el menú desplegable activo */
+.navbar-nav .dropdown-toggle.show {
+    color: #ffffff !important; /* Texto blanco cuando el menú está activo */
+}
+
+.dropdown-menu-custom {
+    background-color: #343a40;
+    border-radius: 10px;
+}
+
+/* Estilos para las opciones del menú desplegable */
+.dropdown-item-custom {
+    color: #ffffff;
+}
+
+.dropdown-item-custom:hover {
+    background-color: #444d56;
+    color: #ffffff;
+}
+
+/* Alinear todos los elementos del menú */
+.navbar-nav {
+    align-items: center;
+}
+
+
+    </style>
+</head>
+<body>
+    <!-- Encabezado -->
+    <header class="d-flex align-items-center justify-content-between p-2 border-bottom">
+
+        <div class="d-flex align-items-center ms-3">
+            <img src="https://www.universidades.com.ar/logos/original/logo-universidad-nacional-de-la-matanza.webp" alt="unlam" class="me-3 unlam">
+            <h4 class="title mt-1">IntraConsulta</h4>
+        </div>
+        <div class="d-flex align-items-center me-3 p-1">
+            <div class="text-end me-3 profile">
+                <p class="mb-0 text-white">RUGNA, JONATHAN NAHUEL</p>
+                <a href="perfil.html" class="text-decoration-none text-white">Mi Perfil</a>
+                <span class="text-muted">|</span>
+                <a href="#" class="text-decoration-none ms-2 me-2 text-white" id="ayudaLink">Ayuda</a>
+                <span class="text-muted">|</span>
+                <a href="../index.html" class="text-decoration-none ms-2 text-white">Cerrar Sesión</a>
+            </div>
+            <img src="https://i.redd.it/szn7f3ln8jr31.jpg" alt="Perfil" class="rounded-circle naveg" style="width: 53px; height: 53px;">
+        </div>
+
+        <div class="dropdown drop">
+            <a class="nav-link dropdown-toggle text-white me-2 cuenta" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa-solid fa-user-circle me-0" style="font-size: 1rem; "></i>
+                Mi cuenta
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="perfil.html">Perfil</a></li>
+                <li><a href="#" class="dropdown-item" id="ayudaLink" data-bs-toggle="modal" data-bs-target="#ayudaModal">Ayuda</a></li>
+                <li><a class="dropdown-item" href="../index.html">Cerrar sesión</a></li>
+            </ul>
+        </div>
+        
+    </header>
+
+<!-- Barra de navegación -->
+<nav class="navbar navbar-expand-lg navbar-custom mb-4">
+    <div class="container-fluid">
+        <ul class="navbar-nav ms-5 align-items-center">
+            <!-- Botón para "Volver al Inicio" -->
+            <li class="nav-item">
+                <a href="home.html" class="nav-button">Volver al Inicio</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+    
+
+ <!-- Contenido principal -->
+<div class="container mt-4 historia">
+    <h4 class="text-left mb-4">Materias Aprobadas</h4>
+
+    <!-- Filtros por año y cuatrimestre -->
+    <div class="mb-3 filtro">
+        <label for="filtroAno" class="form-label">Filtrar por Año:</label>
+        <select id="filtroAno" class="form-select">
+            <option value="todos">Todos</option>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+            <option value="2024">2024</option>
+            
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label for="filtroCuatrimestre" class="form-label">Filtrar por Cuatrimestre:</label>
+        <select id="filtroCuatrimestre" class="form-select">
+            <option value="todos">Todos</option>
+            <option value="primer">1er Cuatrimestre</option>
+            <option value="segundo">2do Cuatrimestre</option>
+        </select>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-hover table-bordered table-striped align-middle" id="tablaMaterias">
+            <thead class="bg-dark text-white">
+                <tr>
+                    <th scope="col">Código</th>
+                    <th scope="col">Materia</th>
+                    <th scope="col">Fecha</th>
+                    <th scope="col">Nota</th>
+                    <th scope="col">Acta</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Año 2022 -->
+                <tr class="bg-secondary-subtle">
+                    <td>02510</td>
+                    <td>Historia de la Tecnología</td>
+                    <td>2022-04-15</td>
+                    <td><span class="badge bg-success">8</span></td>
+                    <td>398745</td>
+                </tr>
+                <tr>
+                    <td>02511</td>
+                    <td>Física I</td>
+                    <td>2022-06-28</td>
+                    <td><span class="badge bg-success">9</span></td>
+                    <td>399852</td>
+                </tr>
+                <tr class="bg-secondary-subtle">
+                    <td>02512</td>
+                    <td>Química General</td>
+                    <td>2022-09-12</td>
+                    <td><span class="badge bg-warning text-dark">7</span></td>
+                    <td>400213</td>
+                </tr>
+                <tr>
+                    <td>02513</td>
+                    <td>Economía</td>
+                    <td>2022-11-05</td>
+                    <td><span class="badge bg-secondary text-white">6</span></td>
+                    <td>400527</td>
+                </tr>
+                <tr class="bg-secondary-subtle">
+                    <td>02514</td>
+                    <td>Análisis Matemático I</td>
+                    <td>2022-07-10</td>
+                    <td><span class="badge bg-success">8</span></td>
+                    <td>398890</td>
+                </tr>
+                <tr>
+                    <td>02515</td>
+                    <td>Sistemas Operativos</td>
+                    <td>2022-12-18</td>
+                    <td><span class="badge bg-success">9</span></td>
+                    <td>401112</td>
+                </tr>
+    
+                <!-- Año 2023 -->
+                <tr class="bg-secondary-subtle">
+                    <td>02620</td>
+                    <td>Informática General</td>
+                    <td>2023-07-17</td>
+                    <td><span class="badge bg-warning text-dark">7</span></td>
+                    <td>409736</td>
+                </tr>
+                <tr>
+                    <td>02621</td>
+                    <td>Matemática General</td>
+                    <td>2023-07-17</td>
+                    <td><span class="badge bg-success">8</span></td>
+                    <td>409742</td>
+                </tr>
+                <tr class="bg-secondary-subtle">
+                    <td>02626</td>
+                    <td>Introducción al Diseño Gráfico en la Web</td>
+                    <td>2023-12-02</td>
+                    <td><span class="badge bg-success">9</span></td>
+                    <td>418533</td>
+                </tr>
+                <tr>
+                    <td>02619</td>
+                    <td>Programación Básica I</td>
+                    <td>2023-12-02</td>
+                    <td><span class="badge bg-success">8</span></td>
+                    <td>418049</td>
+                </tr>
+                <tr class="bg-secondary-subtle">
+                    <td>02628</td>
+                    <td>Estadística</td>
+                    <td>2023-05-10</td>
+                    <td><span class="badge bg-secondary text-white">6</span></td>
+                    <td>409755</td>
+                </tr>
+                <tr>
+                    <td>02629</td>
+                    <td>Álgebra Lineal</td>
+                    <td>2023-11-20</td>
+                    <td><span class="badge bg-warning text-dark">7</span></td>
+                    <td>418542</td>
+                </tr>
+    
+                <!-- Año 2024 -->
+                <tr class="bg-secondary-subtle">
+                    <td>02624</td>
+                    <td>Programación Web I</td>
+                    <td>2024-07-13</td>
+                    <td><span class="badge bg-success">9</span></td>
+                    <td>426657</td>
+                </tr>
+                <tr>
+                    <td>02623</td>
+                    <td>Programación Básica II</td>
+                    <td>2024-07-24</td>
+                    <td><span class="badge bg-success">9</span></td>
+                    <td>429988</td>
+                </tr>
+                <tr class="bg-secondary-subtle">
+                    <td>02625</td>
+                    <td>Bases de Datos I</td>
+                    <td>2024-07-27</td>
+                    <td><span class="badge bg-success">8</span></td>
+                    <td>429991</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+</div>
+<footer class="footer  py-4">
+    <div class="container">
+      <div class="row">
+        <!-- Columna de Información -->
+        <div class="col-md-6 footer-unlam">
+          <h5>Universidad de La Matanza</h5>
+          <p class="mb-3">La Universidad de La Matanza (UNLaM) es una institución educativa de prestigio en la región, comprometida con la excelencia académica y el bienestar de sus estudiantes. En 2024, seguimos trabajando para brindarte las mejores herramientas y recursos para tu educación.</p>
+          <p>¡Gracias por ser parte de nuestra comunidad!</p>
+        </div>
+  
+        <!-- Columna de Contacto y Comentarios -->
+        <div class="col-md-6">
+          <h5>Contáctanos</h5>
+          <p class="mb-3">Si tienes alguna duda, consulta o sugerencia, no dudes en ponerte en contacto con nosotros:</p>
+          <button class="btn btn-primary mb-2" onclick="window.location.href='mailto:contacto@unlam.edu.ar'">Contactanos</button>
+
+        </div>
+      </div>
+  
+      <!-- Derechos de autor -->
+     
+    </div>
+    <div class="text-center mt-1">
+        <p class="mb-0">© 2024 Universidad de La Matanza. Todos los derechos reservados.</p>
+      </div>
+  </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const filtroAno = document.getElementById('filtroAno');
+        const filtroCuatrimestre = document.getElementById('filtroCuatrimestre');
+        const filas = document.querySelectorAll('#tablaMaterias tbody tr');
+    
+       
+        function aplicarFiltro() {
+            const anoSeleccionado = filtroAno.value;
+            const cuatrimestreSeleccionado = filtroCuatrimestre.value;
+    
+            filas.forEach(fila => {
+                const fecha = fila.cells[2].textContent;
+                const ano = new Date(fecha).getFullYear();
+                const mes = new Date(fecha).getMonth() + 1;
+    
+        
+                const cumpleAno = anoSeleccionado === 'todos' || ano.toString() === anoSeleccionado;
+                const cumpleCuatrimestre =
+                    cuatrimestreSeleccionado === 'todos' ||
+                    (cuatrimestreSeleccionado === 'primer' && mes >= 1 && mes <= 7) ||
+                    (cuatrimestreSeleccionado === 'segundo' && mes > 7 && mes <= 12);
+    
+                if (cumpleAno && cumpleCuatrimestre) {
+                    fila.style.display = '';
+                } else {
+                    fila.style.display = 'none';
+                }
+            });
+        }
+    
+        
+        filtroAno.addEventListener('change', aplicarFiltro);
+        filtroCuatrimestre.addEventListener('change', aplicarFiltro);
+    </script>
+</body>
+</html>
